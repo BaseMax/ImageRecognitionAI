@@ -4,7 +4,7 @@ Recognition of the images with artificial intelligence includes train and tests 
 
 ### Image Processing
 
-A final project for a **bachelor degree** in the **computer science** at image processing and artificial intelligence field.
+A final project for a **university degree** in the **computer science** at image processing and artificial intelligence field.
 
 Yep, Remember I'm not a computer science student.
 
