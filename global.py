@@ -13,7 +13,7 @@ import h5py
 # tunable-parameters
 #--------------------
 images_per_class = 80
-fixed_size       = tuple((300, 300))
+fixed_size       = tuple((500, 500))
 train_path       = "dataset/train"
 h5_data          = 'output/data.h5'
 h5_labels        = 'output/labels.h5'
@@ -49,7 +49,7 @@ def fd_histogram(image, mask=None):
 train_labels = os.listdir(train_path)
 
 # sort the training labels
-train_labels.sort()
+#train_labels.sort()
 print(train_labels)
 
 # empty lists to hold feature vectors and labels
@@ -65,7 +65,7 @@ for training_name in train_labels:
     current_label = training_name
 
     # loop over the images in each sub-folder
-    for x in range(1,images_per_class+1):
+    for x in range(0,images_per_class):
         # get the image file name
         # file = dir + "/" + str(x) + ".jpg"
         file = dir + "/" + "{}_{}.jpg".format(training_name, int(training_name)*100 + x)
@@ -98,7 +98,7 @@ print("[STATUS] completed Global Feature Extraction...")
 print("[STATUS] feature vector size {}".format(np.array(global_features).shape))
 
 # get the overall training label size
-print("[STATUS] training Labels {}".format(np.array(labels).shape))
+print("[STATUS] training Labels size {}".format(np.array(labels).shape))
 
 # encode the target labels
 targetNames = np.unique(labels)
